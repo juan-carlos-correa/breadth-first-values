@@ -1,14 +1,16 @@
+export class Node {
+  constructor(value, left = null, right = null) {
+    this.value = value;
+    this.left = left;
+    this.right = right;
+  }
+}
+
 /**
- * [Your function description here]
- * [Your parameters description here]
- * Example:
- * @param {string} str1
- *
- * [What the function returns]
- * Example:
- * @returns {boolean}
+ * Returns the values of a binary tree in breadth-first order.
+ * @param {Node|null} root - The root node of the binary tree.
+ * @returns {number[]} The list of values in breadth-first order.
  */
-export function myFunction(s1, s2) {
-  // TODO: implement
-  return false;
+export function breadthFirstValues(root) {
+  // TODO: Implement this function
 }

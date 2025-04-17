@@ -1,59 +1,64 @@
-> 📄 **New here?** 👉 [See how to use this template →](./TEMPLATE-INSTRUCTIONS.md)
+# 🧠 Breadth First Values
 
-# 🧠 [EXERCISE TITLE HERE]
-
-_A quick one-liner describing the problem._  
-_Example: Check if two strings are anagrams._
+_Given the root of a binary tree, return an array containing the values of the tree in **breadth-first (level-order)** traversal._
 
 ## ✍️ Your Task
 
-Your goal is to solve the coding challenge using a clear and efficient solution.
-
-1. Read the problem and input/output requirements
-2. Implement your solution in `src/main.mjs`
-3. Run tests with `npm run test` to validate your solution
+1. Read the problem and requirements carefully
+2. Write your implementation in `src/main.mjs`
+3. Test your solution with `npm run test`
 
 ## 📘 Description
 
-Describe the problem in detail.
+You are given the root node of a binary tree.
 
-Example:
+Your task is to return an array containing the **values** of the nodes in **breadth-first** (also known as **level-order**) traversal.
 
-Given two strings `s1` and `s2`, return `true` if `s2` is an anagram of `s1`, and `false` otherwise.
-
-An anagram is a word or phrase formed by rearranging the letters of a different word.
+Breadth-first traversal visits nodes level by level from top to bottom, and from left to right within each level.
 
 ## 📥 Input
 
-- `s1`: a string (1 ≤ s1.length ≤ 10⁵)
-- `s2`: a string (1 ≤ s2.length ≤ 10⁵)
-- No spaces, only lowercase letters
+- A binary tree with integer values  
+  (You will use the `Node` class provided for tree creation)
 
 ## 📤 Output
 
-- Returns `true` or `false`
+- An array of integers representing the values of the tree in breadth-first order
+
+Example:
+
+```
+  // Tree:
+  //       1
+  //     /   \
+  //    2     3
+  //   / \     \
+  //  4   5     6
+```
+
+The breadth-first traversal of the above tree would yield the following array:
+
+```javascript
+[1, 2, 3, 4, 5, 6];
+```
 
 ## 🛠️ Instructions
 
-1. Open the file `src/main.mjs` and implement the solution.
-2. To verify your solution, run the tests in `src/main.test.js` using:
+1. Open the file `src/main.mjs` and implement the `breadthFirstValues` function.
+2. Use the `Node` class provided to construct your binary trees in the test file.
+3. To verify your solution, run the tests in `src/main.test.js` using:
 
 ```bash
 npm run test
 ```
 
-> ✅ Do not modify the test file unless you’re adding extra edge cases.
+✅ Do not modify the test file unless you're adding extra edge cases.
 
 ## 💡 Tips
 
-_You can add any tips or hints that might help the user solve the problem._
-
-For example:
-
-- Use `.toLowerCase()` if needed
-- Use objects, arrays or `Map` to count character frequencies
-- Aim for O(n) time complexity if possible
-- Compare frequency maps or use one-pass counter
+- Use a **queue** to keep track of nodes at each level.
+- You can use a simple `while` loop to traverse the tree from top to bottom.
+- Breadth-first traversal is commonly implemented using a queue data structure.
 
 ## 🧪 Run Tests
 
@@ -65,5 +70,3 @@ npm run test
 ```
 
 ✅ Make sure your implementation is in `src/main.mjs` and your tests in `src/main.test.js`.
-
-Happy coding! 🚀
